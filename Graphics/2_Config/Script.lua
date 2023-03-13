@@ -10,7 +10,7 @@
 --func:SetScale(xscale, yscale, "filename")
 --func:SetColor(r, g, b, "filename")
 
-local bg_width = 1280
+local bg_width = 1920
 local x = 0
 local y = 0
 

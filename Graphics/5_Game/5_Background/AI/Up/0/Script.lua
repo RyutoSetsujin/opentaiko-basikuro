@@ -1,10 +1,10 @@
---func:DrawText(x, y, text)
---func:DrawNum(x, y, num)
---func:AddGraph("filename")
---func:DrawGraph(x, y, filename)
---func:SetOpacity(opacity, "filename")
---func:SetScale(xscale, yscale, "filename")
---func:SetColor(r, g, b, "filename")
+--func:DrawText(x, y, text);
+--func:DrawNum(x, y, num);
+--func:AddGraph("filename");
+--func:DrawGraph(x, y, filename);
+--func:SetOpacity(opacity, "filename");
+--func:SetScale(xscale, yscale, "filename");
+--func:SetColor(r, g, b, "filename");
 
 local inAnimeCounter = -20
 
@@ -44,8 +44,8 @@ function update()
     nowAnimeFrame = math.floor(animeCounter+0.5)
 
     if nowAnimeFrame > maxAnimeFrame then
-        animeCounter = 0
-        nowAnimeFrame = 0
+        animeCounter = 0;
+        nowAnimeFrame = 0;
     end
 end
 
@@ -56,21 +56,21 @@ function draw()
         pos = i - 9
         if 9 - math.abs(pos) <= inAnimeCounter then
 
-            offset1 = -(math.sin((pos / 9.0) * math.pi) * 6)
+            offset1 = -(math.sin((pos / 9.0) * math.pi) * 10)
 
             offset2 = 0
 
             if pos > 0 then
-                offset2 = (math.cos((pos / 9.0) * math.pi) * 5)
+                offset2 = (math.cos((pos / 9.0) * math.pi) * 8)
             elseif pos < 0 then
-                offset2 = -(math.cos((pos / 9.0) * math.pi) * 5)
+                offset2 = -(math.cos((pos / 9.0) * math.pi) * 8)
             end
 
-            up_x = 504 + (61 * pos) + offset1 + offset2;
-            up_y = 38
-
-            down_x = -32 + (71 * i)
-            down_y = 536
+            up_x = 756 + (92 * pos) + offset1 + offset2;
+            up_y = 57
+            
+            down_x = -48 + (106 * i)
+            down_y = 804
     
             if pos <= battleState then
                 func:DrawGraph(up_x, up_y, "Up_1P/"..tostring(i)..".png")
