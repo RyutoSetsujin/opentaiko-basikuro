@@ -13,23 +13,23 @@
 local incounter = 0
 local bgZoom = 0
 
-local bg_width = 1280
-local bg_height = 720
+local bg_width = 1920
+local bg_height = 1080
 
-local dan_in_width = 640
-local dan_in_height = 720
+local dan_in_width = 960
+local dan_in_height = 1080
 
-local dan_text_width = 226
-local dan_text_height = 226
+local dan_text_width = 339
+local dan_text_height = 339
 
-local dan_text_x = { 300, 980, 300, 980 }
-local dan_text_y = { 198, 198, 522, 522 }
+local dan_text_x = { 450, 1470, 450, 1470 }
+local dan_text_y = { 297, 297, 783, 783 }
 local dan_text_appearStamps = { 1645, 2188, 2646, 3152 }
 
 local dan_in_move = 0
 
-local x = 640
-local y = 360
+local x = 960
+local y = 540
 
 function clearIn(player)
 end

@@ -1,17 +1,13 @@
---func:DrawText(x, y, text)
---func:DrawNum(x, y, num)
---func:AddGraph("filename")
---func:DrawGraph(x, y, filename)
---func:DrawRectGraph(x, y, rect_x, rect_y, rect_width, rect_height, filename)
---func:DrawGraphCenter(x, y, filename)
---func:DrawGraphRectCenter(x, y, rect_x, rect_y, rect_width, rect_height, filename)
---func:SetOpacity(opacity, "filename")
---func:SetRotation(angle, "fileName")
---func:SetScale(xscale, yscale, "filename")
---func:SetColor(r, g, b, "filename")
+--func:DrawText(x, y, text);
+--func:DrawNum(x, y, num);
+--func:AddGraph("filename");
+--func:DrawGraph(x, y, filename);
+--func:SetOpacity(opacity, "filename");
+--func:SetScale(xscale, yscale, "filename");
+--func:SetColor(r, g, b, "filename");
 
-local x = { 332, 332, 332, 332, 332 }
-local y = { 192, 368, 0, 0, 0 }
+local x = { 498, 498, 498, 498, 498 }
+local y = { 288, 552, 0, 0, 0 }
 
 local animeCounter = { 0, 0, 0, 0, 0 }
 local nowFrame = { 0, 0, 0, 0, 0 }
@@ -31,11 +27,11 @@ end
 
 function init()
     if playerCount <= 2 then
-        y = { 192, 368, 0, 0, 0 }
+        y = { 288, 552, 0, 0, 0 }
     elseif playerCount == 5 then
-        y = { 24, 168, 312, 456, 600 }
+        y = { 36, 252, 468, 684, 900 }
     else
-        y = { 46, 222, 398, 574, 0 }
+        y = { 69, 333, 597, 861, 0 }
     end
 
     func:AddGraph("bg.png")
@@ -54,6 +50,6 @@ function draw(player)
         func:DrawGraph(x[player + 1], y[player + 1], "bg.png")
     end
     if nowFrame[player + 1] <= 20 or not(useExtraAnime) then
-        func:DrawGraph(x[player + 1] - 2, y[player + 1] - 142, tostring(math.min(nowFrame[player + 1], textureCount))..".png")
+        func:DrawGraph(x[player + 1] - 3, y[player + 1] - 213, tostring(math.min(nowFrame[player + 1], textureCount))..".png")
     end
 end

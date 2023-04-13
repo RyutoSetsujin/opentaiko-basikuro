@@ -10,7 +10,7 @@
 --func:SetScale(xscale, yscale, "filename")
 --func:SetColor(r, g, b, "filename")
 
-local bg_width = 1280
+local bg_width = 1920
 local x = 0
 local y = 0
 
@@ -26,7 +26,7 @@ function init()
 end
 
 function update()
-    x = x - (bg_width * deltaTime / 0.0)
+    x = x
     if x < -bg_width then
         x = 0
     end
